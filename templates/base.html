@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Zaqa.az{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Zaqa.az</h1>
+        <nav>
+            <button id="menu-toggle" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+            <div id="nav-links" class="hidden">
+                <a href="#">Anasayfa</a>
+                <a href="#">İlanlar</a>
+                <a href="#">İletişim</a>
+                <a href="#">Hesap</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    <!-- İçerik buraya gelecek -->
+    {% endblock %}
+
+    <footer>
+        <p>© 2024 Zaqa.az. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
